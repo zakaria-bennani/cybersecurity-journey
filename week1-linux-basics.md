@@ -1,4 +1,4 @@
-# Week 1 Linux Basics
+# Day 1 Linux Basics
 
 ## Commands Learned
 
