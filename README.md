@@ -4,48 +4,48 @@
 
 Cybersecurity student at Abu Dhabi University.
 
-Interested in:
+Focused on:
 
 - AI Security
-- Cloud Security
 - Offensive Security
-- Security Engineering
+- Cloud Security
 
 ---
 
-## Current Learning Path
+## Skills
 
 ### Linux
 - File Systems
 - Permissions
 - Processes
-- Bash Scripting
+- Bash
 
-### Upcoming Topics
-- Networking
-- Python
-- Security Tools
-- Cloud Security
-- AI Security
+### Tools
+- Git
+- GitHub
+- VS Code
 
 ---
 
-## Projects
+## Current Projects
 
 ### System Information Tool
 
-A Bash script that collects:
+Collects:
 
 - User information
-- Operating system information
+- OS information
 - Disk usage
 - Memory usage
 
 ---
 
-## Goals
+## Roadmap
 
-- Build security tools
-- Earn certifications
-- Land cybersecurity internship
-- Become AI Security Engineer
+Week 1: Linux Foundations
+
+Week 2: Networking Fundamentals
+
+Week 3: Python Foundations
+
+Week 4: Security Automation
