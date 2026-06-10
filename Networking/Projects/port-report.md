@@ -3,10 +3,10 @@
 ## Host Information
 
 Hostname:
-__________
+LAPTOP-1O6F6F4U
 
 Date:
-__________
+Thu Jun 11 03:13:43 +04 2026
 
 ## Open Ports
 
