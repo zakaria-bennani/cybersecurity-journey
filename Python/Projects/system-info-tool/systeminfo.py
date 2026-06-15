@@ -1,8 +1,8 @@
+import getpass
 import platform #give you the machines info. What computer?
 import subprocess #can make you run terminal commands using python
-import getpass
 from datetime import datetime #gives you the current time and date
-import getpass
+import argparse
 
 def get_user():
     return getpass.getuser()
@@ -27,7 +27,7 @@ def run_command(command):
         return f"Error: {e}"# if error found dont crash, return in readable format message
     
 def main():
-
+    
     report = ""
 
     report += "=" * 50 + "\n"
@@ -39,7 +39,7 @@ def main():
     report += f"Date: {get_time()}\n\n"
 
     report += "System Information:\n"
-    report += run_command(["uname", "-a"])
+    report += run_command(["uname", "-a"]) #uses the run_command function i created to run the linux commands
 
     report += "\nDisk Usage:\n"
     report += run_command(["df", "-h"])
@@ -53,6 +53,24 @@ def main():
         file.write(report)
 
     print("\nReport saved to report.txt")
+    
+    parser = argparse.ArgumentParser(
+        description="System Information Tool"
+    )
 
+    parser.add_argument(
+        "--save",
+        action="store_true",
+        help="Save report to file"
+    )
+    args = parser.parse_args()
+    
+    if args.save:
+        with open("report.txt", "w") as file:
+            file.write(report)
+
+    
 if __name__ == "__main__":
     main()
+
+
