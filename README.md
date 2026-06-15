@@ -1,51 +1,36 @@
-# Cybersecurity Journey
+# System Information Tool
 
-## About Me
+## Description
 
-Cybersecurity student at Abu Dhabi University.
+A Python-based security utility that gathers system information from Linux machines.
 
-Focused on:
+## Features
 
-- AI Security
-- Offensive Security
-- Cloud Security
-
----
-
-## Skills
-
-### Linux
-- File Systems
-- Permissions
-- Processes
-- Bash
-
-### Tools
-- Git
-- GitHub
-- VS Code
-
----
-
-## Current Projects
-
-### System Information Tool
-
-Collects:
-
-- User information
-- OS information
+- Current user
+- Hostname
+- Date and time
+- Operating system information
 - Disk usage
 - Memory usage
+- Report generation
 
----
+## Technologies
 
-## Roadmap
+- Python
+- getpass
+- platform
+- subprocess
+- argparse
 
-Week 1: Linux Foundations
+## Usage
 
-Week 2: Networking Fundamentals
+```bash
+python3 systeminfo.py
 
-Week 3: Python Foundations
+python3 systeminfo.py --save
+```
 
-Week 4: Security Automation
+## Security Relevance
+
+System information gathering is commonly performed during system administration, incident response, and security assessments.
+
