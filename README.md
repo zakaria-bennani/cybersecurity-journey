@@ -33,3 +33,4 @@ python3 systeminfo.py --save
 ## Security Relevance
 
 System information gathering is commonly performed during system administration, incident response, and security assessments.
+
