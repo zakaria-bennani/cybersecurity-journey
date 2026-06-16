@@ -1,0 +1,12 @@
+SECURITY LOG REPORT
+========================================
+Successful logins: 3
+Failed logins: 4
+
+IP Activity:
+192.168.1.10: 1 events
+192.168.1.20: 3 events
+Potential brute force detected
+192.168.1.15: 1 events
+10.0.0.5: 1 events
+172.16.1.8: 1 events
