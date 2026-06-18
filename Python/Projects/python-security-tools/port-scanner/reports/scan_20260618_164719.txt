@@ -1,0 +1,7 @@
+PORT SCAN REPORT
+========================================
+Target: 127.0.0.1
+Mode: fast
+
+Open Ports:
+9999 Unknown
