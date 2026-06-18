@@ -159,4 +159,5 @@ Through this project I learned:
 
 ## Screenshot
 
-![Port Scanner Output](screenshot.png)
+<img width="920" height="1032" alt="image" src="https://github.com/user-attachments/assets/2c478e33-56b8-47d4-8e74-a50be9a7147b" />
+
