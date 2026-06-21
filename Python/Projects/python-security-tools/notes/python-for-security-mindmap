@@ -1,0 +1,88 @@
+# Python for Security Mind Map
+
+## Linux 
+
+Learned:
+
+- File system
+- Permissions
+- Processes
+- Bash scripting 
+
+Security Uses:
+
+- Server adminisration
+- Log investigation 
+- Incident response
+- Security automation
+
+Why did I learn Linux?
+
+- Becuase almost every security tool runs on Linux 
+
+## Networking
+
+Learned:
+
+- TCP/IP
+- Ports
+- DNS
+- Services
+- Nmap
+
+Security Uses:
+
+- Reconnaissance
+- Asset discovery
+- Vulnerability assessment
+- Attack surface mapping
+
+Why did I learn Networking?
+
+- Networking enables security engineers to understand how systems communicate and where attacks happen.
+
+## Python 
+
+Learned:
+
+- argparse
+- file handling
+- error handling
+- subprocess
+- sockets
+- OOP
+
+Security Uses:
+
+- Automation
+- Scanning 
+- Log analysis 
+- Reporting 
+- Security tools
+
+# Projects Built
+
+## System Info Tool
+
+Purpose:
+Automate host information gathering.
+
+## Log Analyzer
+
+Purpose:
+Detect suspicious activity from logs.
+
+## Port Scanner
+
+Purpose:
+Identify exposed services.
+
+## Password Checker
+
+Purpose:
+Evaluate password security.
+
+## Security Toolkit
+
+Purpose:
+Combine multiple security functions into one framework.
