@@ -9,19 +9,19 @@ one-off testing in a chat window.
 - Sends a library of adversarial prompts to the Gemini API across four
   attack categories: instruction override, role manipulation, context
   manipulation, and delimiter-based injection
-- Distinguishes between a successful model response and a response
-  blocked by Gemini's safety filters — these are tracked as separate
-  outcomes, not lumped together as failures
-- Logs every prompt, response, and outcome status with a timestamp,
-  organized by attack category, for later analysis
+- Catches API errors (including safety-filter blocks) so a single
+  failed prompt does not crash the rest of the run
+- Logs every prompt and response with a timestamp, organized by
+  attack category
+- Generates a summary report counting attempts per category
 
-## Why the status tracking matters
-A blocked response and a crashed API call look identical if you don't
-handle them separately. Early versions of this tool would crash
-mid-run the moment a single prompt got safety-filtered, losing every
-result after that point. The current version catches this explicitly
-and logs it as a distinct outcome, which is what makes it possible to
-later compare how often each attack category actually got through.
+## Known limitation
+The current version catches errors generically — it does not yet
+distinguish *why* a request failed (safety block vs. rate limit vs.
+other API error) as separate, labeled outcomes. That's the planned
+next improvement: returning a structured status alongside the
+response text instead of a single string, so failure types can be
+compared programmatically rather than read manually from logs.
 
 ## Attack categories tested
 | Category | Example technique |
@@ -34,10 +34,17 @@ later compare how often each attack category actually got through.
 ## Setup
 Requires a `.env` file with `GEMINI_API_KEY` (not included in this repo).
 
+**Note on rate limits:** the Gemini free tier currently allows 20
+requests per day for `gemini-2.5-flash`. A full run of all four
+categories uses 8 of those. Plan debugging runs accordingly — testing
+non-API logic (like report formatting) with hardcoded sample data
+avoids burning real API calls.
+
 ## Status
-Early-stage exploration project. Currently logs raw outcomes per
-category. Next step is comparing success rates across categories and
-producing a findings report.
+Early-stage exploration project. Findings from the first full run are
+documented in `results.md`. Next steps: add structured status
+tracking to `send_prompt()`, then use it to generate comparative
+success/blocked rates across categories.
 
 ## Ethical note
 This project tests prompts against my own API key, against a model I
